@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+
+import Wrapper from "./Components/Wrapper";
 
 function App() {
+  const [mode, setMode] = useState(true);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className={mode ? "light font-face-gm" : "dark font-face-gm"}
+      style={
+        !mode
+          ? {
+              position: "absolute",
+              background: "#f2f2f2",
+              height: "100%",
+              width: "100%",
+            }
+          : {
+              position: "absolute",
+              background: " #171823",
+              height: "100%",
+              width: "100%",
+            }
+      }
+    >
+      <Wrapper mode={mode} setMode={setMode}></Wrapper>
     </div>
   );
 }

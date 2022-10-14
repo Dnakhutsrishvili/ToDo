@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+.font-face-gm {
+  font-family: "JosefinSans";
+}
+.light {
+  background: #f2f2f2;
+  color: #494c6b;
+}
+.dark {
+  background: #171823;
+  color: #c8cbe7;
+}
